@@ -5,6 +5,12 @@
       "last": "Mahato",
       "completed": true,
       "id": 6
+    },
+    {
+      "first": "Himangshu",
+      "last": "SDE1",
+      "completed": true,
+      "id": 7
     }
   ]
 }

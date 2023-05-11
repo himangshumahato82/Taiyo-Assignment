@@ -1,7 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 import DisplayContacts from './DisplayContacts';
-// import Status from './Status';
+import './Contact.css';
+
 function Contact(props) {
     const [firstname, setFirstname] = useState()
     const [lastname, setLastname] = useState()
@@ -43,77 +44,71 @@ function Contact(props) {
     }
     return (
         <div>
-            <div style={{ height: "50px", backgroundColor: "rgb(11, 165, 204)", marginTop: "-20px" }}>
-                <h1 style={{ textAlign: "center" }}>Contact Page</h1>
+            <div className="header">
+                <h1>Contact Page</h1>
             </div>
             {
                 contact === false ?
 
-                    <div style={{ textAlign: "center", marginTop: "20px" }}>
-                        <button style={{ width: "100px", height: "40px", fontSize: "20px" }} onClick={AddContact}>Contact</button>
+                    <div className="add-contact">
+                        <button className="add-contact-button" onClick={AddContact}>Contact</button>
 
 
                         <div>
                             <DisplayContacts />
                         </div>
                     </div> :
+
                     <div>
-                        <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                            <div style={{ margin: "auto", display: "block" }}>
-
-
-                                <form onSubmit={handleSubmit} >
-                                    <input type="text"
-                                        value={firstname}
-                                        placeholder="First Name"
-                                        onChange={(e) => setFirstname(e.target.value)}
-                                    />
-                                    <br />
-
-                                    <input type="text"
-                                        value={lastname}
-                                        placeholder="LastName"
-                                        onChange={(e) => setLastname(e.target.value)}
-                                    />
-                                    <br />
-                                    <div style={{ display: "flex", justifyContent: "space-evenly" }}>
-                                        <h1>Status:</h1>
-                                        <div style={{ marginTop: "20px", fontSize: "20px", fontWeight: "bold" }}>
-                                            <div>
-                                                <input
-                                                    type="radio"
-                                                    value="active"
-                                                    checked={status === "active"}
-                                                    onChange={(e) => setStatus(e.target.value)}
-                                                />
-                                                Active
-                                            </div>
-                                            <div className="col-2">
-                                                <input
-                                                    type="radio"
-                                                    value="inactive"
-                                                    checked={status === "inactive"}
-                                                    onChange={(e) => setStatus(e.target.value)}
-                                                />
-                                                Inactive
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <button type='submit'>Submit</button>
-
-                                </form>
-
-
-
-
+                        <form onSubmit={handleSubmit} className="contact-form">
+                            <div className="form-row">
+                                <label htmlFor="firstname">First Name:</label>
+                                <input type="text"
+                                    id="firstname"
+                                    value={firstname}
+                                    placeholder="First Name"
+                                    onChange={(e) => setFirstname(e.target.value)}
+                                />
                             </div>
-
-                        </div>
-                        <div style={{ textAlign: "center", marginTop: "20px" }}>
-                            <button style={{ height: "40px", fontSize: "20px" }}>Save Contact</button>
-                        </div>
+                            <div className="form-row">
+                                <label htmlFor="lastname">Last Name:</label>
+                                <input type="text"
+                                    id="lastname"
+                                    value={lastname}
+                                    placeholder="Last Name"
+                                    onChange={(e) => setLastname(e.target.value)}
+                                />
+                            </div>
+                            <div className="form-row">
+                                <h3>Status:</h3>
+                                <div>
+                                <label>
+                                  <input
+                                    type="radio"
+                                    value="active"
+                                    checked={status === "active"}
+                                    onChange={(e) => setStatus(e.target.value)}
+                                  />
+                                  Active
+                                </label>
+                                <label>
+                                  <input
+                                    type="radio"
+                                    value="inactive"
+                                    checked={status === "inactive"}
+                                    onChange={(e) => setStatus(e.target.value)}
+                                  />
+                                  Inactive
+                                </label>
+                              </div>
+                              
+                            </div>
+                            <button type='submit' className="save-contact-button">Save Contact</button>
+                        </form>
                     </div>
+
+
+
             }
         </div>
     );
