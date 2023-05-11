@@ -18,7 +18,9 @@ var links=[
         <div className="categoryContainer">
         <div className="linkContainer">
           {links.map((link, index) => (
-            <Link to={link.path}>{link.title}</Link>
+            <h1 >
+            <Link style={{textDecoration:"none"}} to={link.path}>{link.title}</Link>
+            </h1>
           ))}
         </div>
   

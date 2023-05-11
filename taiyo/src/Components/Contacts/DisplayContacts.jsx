@@ -86,12 +86,11 @@ function DisplayContacts(props) {
         <div>
        {state.length>0?
         
-        <div>
+        <div >
                         <div >
-                          
-                         
                         <form onSubmit={editTask} 
                         style={{ display: showEdit.status ? "flex" : "none" }}>
+                         <label htmlFor="">FirstName:</label>
                             <input type="text"
                               value={editInp1}
                               required
@@ -101,7 +100,7 @@ function DisplayContacts(props) {
                               }}
                             />
                              <br />
-                        
+                        <label htmlFor="">LastName:</label>
                             <input type="text"
                               value={editInp2}
                               required
@@ -111,18 +110,22 @@ function DisplayContacts(props) {
                               }}
                             />
                             <br/>
-                            <button type='submit'>Edit</button>
+                            <button type='submit'>Save Contact</button>
                             </form>
-                         </div>
+                       </div>
                     
                 
-                 
+                         <div style={{width:"80%",display:"grid",gridTemplateColumns:"repeat(3,1fr)",margin:"auto",marginTop:"10%"}}>
                 {state.map((e) => {
                   console.log(e);
                   return (
+                    
                     <div className="taskItem" key={e.id}>
                       <div className="itembegain">
-                        <img
+                        <div>{e.first}{" "}{e.last}</div>
+                      </div>
+                        <div className="itemends">
+                      <img
                           src={ok}
                           style={{ display: e.completed ? "flex" : "none" }}
                           alt=""
@@ -134,9 +137,6 @@ function DisplayContacts(props) {
                           alt=""
                           onClick={() => changeStatus(e)}
                         />
-                        <div>{e.first}{e.last}</div>
-                      </div>
-                      <div className="itemends">
                         <img
                           src={edit}
                           alt=""
@@ -152,10 +152,12 @@ function DisplayContacts(props) {
                           }}
                         />
                         <img src={garbage} alt="" onClick={() => delTask(e)} />
-                      </div>
+              </div>
                     </div>
+                    
                   );
                 })}
+                </div>
                 
             
             
@@ -165,6 +167,7 @@ function DisplayContacts(props) {
         }
 
             </div>
+            
     );
 }
 

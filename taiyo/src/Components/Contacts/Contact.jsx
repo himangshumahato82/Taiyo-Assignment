@@ -12,7 +12,9 @@ function Contact(props) {
     const AddContact = () => {
         SetContact(true)
     }
-
+    const AddContact1 = () => {
+        SetContact(false)
+    }
     const handleSubmit = (e) => {
         setFirstname("");
         setLastname("");
@@ -51,7 +53,7 @@ function Contact(props) {
                 contact === false ?
 
                     <div className="add-contact">
-                        <button className="add-contact-button" onClick={AddContact}>Contact</button>
+                        <button className="add-contact-button" onClick={AddContact}>Create Contact</button>
 
 
                         <div>
@@ -103,8 +105,15 @@ function Contact(props) {
                               </div>
                               
                             </div>
-                            <button type='submit' className="save-contact-button">Save Contact</button>
+                            <button type='submit'   className="save-contact-button">Save Contact</button>
+                             
+
                         </form>
+                        <div style={{ textAlign: 'center' }}>
+            <button className="view-contact-button" onClick={AddContact1}>View All Contact</button>
+        </div>
+
+                       
                     </div>
 
 

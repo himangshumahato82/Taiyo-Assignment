@@ -10,8 +10,9 @@ function App() {
       <h1 style={{textAlign:"center"}}> Taiyo.AI Assignment</h1>
       <Routes>
       <Route path="/" element={<Home />}>
+      <Route path="map" element={<Map/>} />
       <Route path="contact" element={<Contact/>} />
-       <Route path="map" element={<Map/>} />
+       
        </Route>
       </Routes>
     </div>
