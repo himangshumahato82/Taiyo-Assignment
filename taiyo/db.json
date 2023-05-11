@@ -3,7 +3,8 @@
     {
       "first": "Himangshu",
       "last": "Mahato",
-      "id": 1
+      "completed": true,
+      "id": 6
     }
   ]
 }
