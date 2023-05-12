@@ -1,6 +1,6 @@
 /* Common styles */
 .form-container {
-  width: 80%;
+  width: 90%;
   margin: auto;
 }
 
@@ -37,7 +37,7 @@
   }
 
   .taskItem {
-    width: 80%;
+    width: auto;
     margin: 5%;
     margin-bottom: 5%;
   }
@@ -45,6 +45,9 @@
   .itembegain,
   .itemends {
     font-size: 16px;
+    /* margin-left: 20px; */
+    padding: 20px;
+    /* border: 2px solid rgb(198, 17, 17); */
   }
 
   .itembegain img,
@@ -71,9 +74,18 @@
   }
 
   .taskItem {
-    width: 80%;
-    margin: auto;
+    width:auto;
+    /* margin: auto; */
+   
     margin-bottom: 5%;
+   
+  }
+  .itembegain,
+  .itemends {
+    font-size: 16px;
+    /* margin-left: 7%; */
+     padding: 15px; 
+    /* border: 2px solid rgb(198, 17, 17); */
   }
 
   .map-contacts{

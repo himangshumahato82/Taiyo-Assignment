@@ -17,6 +17,7 @@ function App() {
   <Route path="map" element={<QueryClientProvider client={queryClient}>
   <Dashboard />
 </QueryClientProvider>} />
+<Route path="/" element={<Contact/>} />
       <Route path="contact" element={<Contact/>} />
        
        </Route>
