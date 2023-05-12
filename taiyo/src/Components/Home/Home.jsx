@@ -9,7 +9,7 @@ var links=[
     },
     {
         path:"map",
-        title:"Map",  
+        title:"Charts and Maps",  
 
     },
 ];

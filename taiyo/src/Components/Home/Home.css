@@ -1,6 +1,6 @@
 /* For desktop */
 .categoryContainer {
-  box-shadow: 0 0 10px black;
+  /* box-shadow: 0 0 10px black; */
   margin: 50px 50px;
   width: auto;
   display: grid;
@@ -25,7 +25,7 @@ h1 {
 }
 
 /* For mobile */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
   .categoryContainer {
     margin: 20px 20px;
     grid-template-columns: 1fr;

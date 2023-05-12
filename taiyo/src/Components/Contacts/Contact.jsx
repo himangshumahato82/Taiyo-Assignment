@@ -41,7 +41,7 @@ function Contact(props) {
 
     }
     return (
-        <div>
+        <div className='main-container'>
             <div className="header">
                 <h1>Contact Page</h1>
             </div>
@@ -53,18 +53,18 @@ function Contact(props) {
 
 
                         <div>
-                            <DisplayContacts />
+                            <DisplayContacts/>
                         </div>
                     </div> :
 
-                    <div>
+                    <div className='create-contact'>
                         <form onSubmit={handleSubmit} className="contact-form">
                             <div className="form-row">
                                 <label htmlFor="firstname">First Name:</label>
                                 <input type="text"
                                     id="firstname"
                                     value={firstname}
-                                    placeholder="First Name"
+                                   
                                     onChange={(e) => setFirstname(e.target.value)}
                                 />
                             </div>
@@ -73,11 +73,11 @@ function Contact(props) {
                                 <input type="text"
                                     id="lastname"
                                     value={lastname}
-                                    placeholder="Last Name"
+                                   
                                     onChange={(e) => setLastname(e.target.value)}
                                 />
                             </div>
-                            <div className="form-row">
+                            <div className="form-row1">
                                 <h3>Status:</h3>
                                 <div>
                                 <label>
@@ -104,12 +104,12 @@ function Contact(props) {
                              
 
                         </form>
-                        <div style={{ textAlign: 'center' }}>
+                        <div className='view-contact-buttondiv'>
             <button className="view-contact-button" onClick={AddContact1}>View All Contact</button>
         </div>
 
                        
-                    </div>
+     </div>
 
 
 

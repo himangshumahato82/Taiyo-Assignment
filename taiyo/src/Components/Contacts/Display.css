@@ -1,11 +1,45 @@
+/* Common styles */
+.form-container {
+  width: 80%;
+  margin: auto;
+}
+
+.taskItem {
+  padding: 5%;
+  margin: 5%;
+  color: #303030;
+  background: #efefef;
+  margin-bottom: 5%;
+  border-radius: 6px;
+  margin: auto;
+  box-shadow: 0 0 7px rgb(224, 118, 19);
+}
+
+.itembegain,
+.itemends {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.itembegain img,
+.itemends img {
+  width: 2.2rem;
+  cursor: pointer;
+}
+
 /* Mobile styles */
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   form {
     flex-direction: column;
   }
 
   .taskItem {
-    width: 100%;
+    width: 80%;
+    margin: 5%;
+    margin-bottom: 5%;
   }
 
   .itembegain,
@@ -17,20 +51,17 @@
   .itemends img {
     width: 1.8rem;
   }
+
   .map-contacts{
-    
-      width: 80%;
-      display: grid;
-      /* gridTemplateColumns: repeat(3,1fr); */
-      grid-template-columns: repeat(3,1fr);
-      margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     margin-top: 10%;
-    
+    margin: 5%;
   }
 }
 
 /* Desktop styles */
-@media (min-width: 601px) {
+@media (min-width: 650px) {
   form {
     margin: 5rem auto;
     display: flex;
@@ -38,39 +69,16 @@
     gap: 1rem;
     margin-bottom: 1rem;
   }
-  .map-contacts{
-    
-    width: 80%;
-    display: grid;
-    /* gridTemplateColumns: repeat(3,1fr); */
-    grid-template-columns: repeat(2,1fr);
-    margin: auto;
-  margin-top: 10%;
-  
-}
 
   .taskItem {
-    width: 10rem;
-    padding: 2rem;
-    color: #303030;
-    background: #efefef;
-    margin-bottom: 20px;
-    border-radius: 6px;
-    box-shadow: 0 0 7px rgb(224, 118, 19);
+    width: 80%;
+    margin: auto;
+    margin-bottom: 5%;
   }
 
-  .itembegain,
-  .itemends {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    font-size: 18px;
-    font-weight: 700;
-  }
-
-  .itembegain img,
-  .itemends img {
-    width: 2.2rem;
-    cursor: pointer;
+  .map-contacts{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 10%;
   }
 }
