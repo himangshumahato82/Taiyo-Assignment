@@ -17,6 +17,16 @@
   .itemends img {
     width: 1.8rem;
   }
+  .map-contacts{
+    
+      width: 80%;
+      display: grid;
+      /* gridTemplateColumns: repeat(3,1fr); */
+      grid-template-columns: repeat(3,1fr);
+      margin: auto;
+    margin-top: 10%;
+    
+  }
 }
 
 /* Desktop styles */
@@ -28,6 +38,16 @@
     gap: 1rem;
     margin-bottom: 1rem;
   }
+  .map-contacts{
+    
+    width: 80%;
+    display: grid;
+    /* gridTemplateColumns: repeat(3,1fr); */
+    grid-template-columns: repeat(2,1fr);
+    margin: auto;
+  margin-top: 10%;
+  
+}
 
   .taskItem {
     width: 10rem;

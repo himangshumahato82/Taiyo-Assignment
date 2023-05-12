@@ -1,37 +1,10 @@
 {
   "contacts": [
     {
-      "first": "Himangshu",
-      "last": "Mahat",
-      "completed": true,
-      "id": 1
-    },
-    {
-      "first": "Himangshu",
+      "first": "furkan",
       "last": "Mahato",
       "completed": true,
-      "id": 2
-    },
-    {
-      "first": "Himangshu",
-      "last": "SDE1",
-      "completed": true,
-      "id": 3
-    },
-    {
-      "first": "Himangshu",
-      "last": "SDE1",
-      "completed": false,
-      "id": 4
-    },
-    {
-      "first": "Himangsh",
-      "last": "Himangsh",
-      "completed": true,
-      "id": 5
-    },
-    {
-      "id": 6
+      "id": 1
     }
   ]
 }

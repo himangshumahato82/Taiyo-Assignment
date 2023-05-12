@@ -27,21 +27,17 @@ function Contact(props) {
         }
 
         console.log(obj)
-        fetch("http://localhost:3002/contacts", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(obj)
-
+        fetch("https://taiyo-server-production.up.railway.app/contacts", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(obj),
         })
-            .then((res) => res.json())
-            .then((data) => {
-
-                // setStatus(data)
-
-
-            })
+          .then((res) => res.json())
+          .then((data) => {
+            // setStatus(data)
+          });
 
     }
     return (
@@ -102,8 +98,7 @@ function Contact(props) {
                                   />
                                   Inactive
                                 </label>
-                              </div>
-                              
+                              </div>  
                             </div>
                             <button type='submit'   className="save-contact-button">Save Contact</button>
                              
