@@ -13,7 +13,7 @@
     }
     
     .add-contact-button {
-        width: 25%;
+        width: auto;
         height:auto;
         font-size: 20px;
         font-weight: bold;
@@ -22,6 +22,7 @@
         margin: 0 auto;
         border-radius: 10px;
         border: none;
+        margin-bottom: 20px;
         /* font-size: 15px; */
       }
       .add-contact-button:hover{
@@ -34,6 +35,7 @@
         flex-direction: column;
         font-size: 20px;
         font-weight: bold;
+        padding: 10px;
         margin: auto;
         border-radius: 20px;
         justify-content: center; /* add this */
@@ -118,7 +120,7 @@
         flex-direction: column;
     }
     .add-contact-button {
-        width: 25%;
+        width: auto;
         height:auto;
         font-size: 20px;
         font-weight: bold;
@@ -127,6 +129,7 @@
         margin: 0 auto;
         border-radius: 10px;
         border: none;
+        margin-bottom: 20px;
       }
       .add-contact-button:hover{
         background-color: aquamarine;

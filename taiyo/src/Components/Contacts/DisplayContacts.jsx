@@ -169,7 +169,9 @@ function DisplayContacts(props) {
           </div>
         </div>
       ) : (
-        <p>No Contact Found Please add contact from Create Contact Buttom</p>
+        <div className="contact-empty">
+        <h1>No Contact Found Please add contact from Create Contact Button</h1>
+        </div>
       )}
     </div>
   );
