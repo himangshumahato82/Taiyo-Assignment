@@ -1,4 +1,20 @@
 # Taiyo-Assignment
+## Technology Used
+> • React,
+> • React-Redux,
+> • React-Router,
+> • React-query,
+> • React-Router,
+> • React-leaflet,
+> • Normal CSS,
+> • Tailwind CSS,
+> • API,
+> • JSON Server,
+
+## Tools
+> • VS Code
+> • GitHub
+> • Git
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
