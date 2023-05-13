@@ -39,6 +39,8 @@ function Contact(props) {
             // setStatus(data)
           });
 
+          alert("I have saved your contact details, and if you would like to view those, please click the 'View All Contact' button.")
+
     }
     return (
         <div className='main-container'>
