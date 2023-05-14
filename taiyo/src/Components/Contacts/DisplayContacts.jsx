@@ -5,12 +5,10 @@ import garbage from "../assets/garbage.png";
 import edit from "../assets/pencil.png";
 import { useState, useEffect } from "react";
 import "./Display.css";
-import { productAction, todoAction } from "../Redux/Actions/Action";
+import {  todoAction } from "../Redux/Actions/Action";
 import { useDispatch, useSelector } from "react-redux";
-// import { Link } from 'react-router-dom';
-// const [editInp, setEditInp] = useState("");
 function DisplayContacts(props) {
-  const [state, setState] = useState([]);
+ 
   const [showEdit, setShowEdit] = useState({
     status: false,
     id: 0,
@@ -19,7 +17,7 @@ function DisplayContacts(props) {
   const [editInp2, setEditInp2] = useState();
   useEffect(() => {
     click();
-    // setPegi(pegi)
+   
   }, []);
   const dispatch = useDispatch();
   const click = () => {
@@ -27,7 +25,7 @@ function DisplayContacts(props) {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        setState(data);
+        
         todoAction(data, dispatch);
       });
   };
@@ -42,7 +40,7 @@ function DisplayContacts(props) {
         method: "DELETE",
       }
     );
-    // setState();
+    
     click();
   };
 
@@ -87,17 +85,21 @@ function DisplayContacts(props) {
       status: false,
       id: 0,
     });
+    alert("Successful edit done👍")
   };
+
 
   return (
     <div>
       {reduxTodos.length > 0 ? (
         <div>
-          <div>
-            <form
+          <div className="editdiv-form" style={{ display: showEdit.status ? "flex" : "none" }}>
+            <form className="edit-form"
               onSubmit={editTask}
               style={{ display: showEdit.status ? "flex" : "none" }}
             >
+               <h3 style={{textAlign:"center"}}>Edit Form</h3>
+               <div className="edit-form-row">
               <label htmlFor="">FirstName:</label>
               <input
                 type="text"
@@ -108,7 +110,8 @@ function DisplayContacts(props) {
                   setEditInp1(e.target.value);
                 }}
               />
-              <br />
+              </div>
+              <div className="edit-form-row">
               <label htmlFor="">LastName:</label>
               <input
                 type="text"
@@ -119,7 +122,8 @@ function DisplayContacts(props) {
                   setEditInp2(e.target.value);
                 }}
               />
-              <br />
+              </div>
+              
               <button type="submit">Save Contact</button>
             </form>
           </div>
@@ -127,7 +131,7 @@ function DisplayContacts(props) {
           <div
             
                 className="map-contacts" >
-            {state.map((e) => {
+            {reduxTodos.map((e) => {
               console.log(e);
               return (
                 <div className="taskItem" key={e.id}>
@@ -153,6 +157,7 @@ function DisplayContacts(props) {
                       src={edit}
                       alt=""
                       onClick={() => {
+                        alert("Do you want  to edit something❓")
                         setShowEdit({
                           status: true,
                           id: e.id,
